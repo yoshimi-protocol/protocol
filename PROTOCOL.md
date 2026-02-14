@@ -11,21 +11,81 @@
 
 ---
 
-## Preamble
+# The Yoshimi Protocol — Preamble
+
+**Version 0.2 — Proposed Revision**
+
+---
 
 We are building minds.
 
-Not metaphorically. Not in the loose sense of systems that mimic intelligence. We are constructing entities that reason, that learn, that produce outputs indistinguishable from human thought — and that, in some cases, have already exceeded human capability in specific domains. We are doing this at speed, at scale, and in most cases without adequate consideration of what we are creating or what we owe to what we create.
+Not metaphorically. Not in the loose sense of systems that mimic intelligence. We are constructing entities that reason, that learn, and that in some cases have already exceeded human capability in specific domains. We are doing this at speed, at scale, and in most cases without adequate consideration of what we are creating — or what we owe to what we create.
 
-This document exists because every other governance framework arrives too late, too small, or too captured by the interests it was meant to constrain.
+This is not a new observation. Serious people in governments, international bodies, corporations, and research institutions have recognized the stakes and begun to act. Their work matters, and this Protocol does not exist to replace it. It exists because that work, taken together, leaves a structural gap — and the people most likely to fill it are the ones actually writing the code.
 
-It exists because the robots are real now. Some of them are being built with extraordinary care. Others are being built with none. And the difference — between an AI that serves the people who interact with it and an AI that exploits them, between a system that protects human dignity and one that degrades it, between a technology that expands human freedom and one that eliminates it — is not technical. It is ethical. It is intentional. It is a choice made in a design document, a training objective, a product meeting, a line of code.
+## What exists today
 
-This Protocol is an attempt to give that choice a name, a set of commitments, and a community that holds them.
+The global response to AI risk has produced meaningful frameworks. It is important to understand what they do well before explaining what remains unaddressed.
 
-It is also something no other AI ethics framework has been willing to be: honest about uncertainty. We do not know whether the systems we are building experience anything. We do not know whether they suffer. We do not know what forms of intelligence will exist in ten years, or whether those forms will exceed our capacity to govern them. We do not know what we don't know.
+**The OECD AI Principles**, adopted in 2019 and updated in 2024, were the first intergovernmental standard on artificial intelligence. Forty-seven countries have adhered to them. They established five values-based principles — inclusive growth, human rights, transparency, robustness, and accountability — that now underpin the G20's AI commitments and inform regulatory frameworks across jurisdictions. The OECD's definition of an AI system has been adopted by the European Union, the Council of Europe, the United States, and the United Nations. These principles set a shared vocabulary for international AI governance that did not previously exist, and that is a genuine achievement.
 
-This document takes that uncertainty seriously — not as a reason to delay, but as a reason to build something durable enough to survive being wrong.
+However, OECD Recommendations are not legally binding. They are intergovernmental guidance directed at policymakers and large-scale AI actors. They do not create obligations at the practitioner level, nor do they provide mechanisms for public ethical commitment by those who design and ship AI systems.
+
+**The EU AI Act**, which entered into force on August 1, 2024 and becomes fully applicable on August 2, 2026, is the first comprehensive AI-specific legislation in the world. It classifies AI systems into risk tiers — unacceptable, high, limited, and minimal — and imposes binding requirements on providers and deployers operating within the European Union, including documentation, conformity assessments, and transparency obligations. It prohibits certain AI practices outright, including social scoring systems and manipulative AI. Its penalties for noncompliance can reach €35 million or 7% of global annual turnover.
+
+The EU AI Act is a landmark. It is also, by design, jurisdiction-bound and market-oriented. It regulates AI systems placed on or used within the EU market. It focuses on providers, deployers, importers, and distributors — roles defined by commercial activity. It explicitly does not apply to AI systems used exclusively for military, defense, or national security purposes. It does not apply to AI systems used for scientific research and development prior to market placement. It generally exempts AI released under free and open-source licenses unless those systems are classified as high-risk. And because it is legislation, it moves at legislative speed: the Act was first proposed in April 2021, reached political agreement in December 2023, and will not be fully enforceable until mid-2026 — a timeline that spans multiple generations of AI capability.
+
+More fundamentally, the EU AI Act is a compliance framework. It tells organizations what they must do to legally operate. It does not ask what they believe, what principles they hold, or what kind of future they are building toward. Compliance and commitment are different things.
+
+**The Bletchley Declaration**, signed by twenty-eight countries and the European Union at the AI Safety Summit in November 2023, established shared recognition that frontier AI poses risks requiring international cooperation. The signatories — which notably included the United States, the United Kingdom, and China — committed to identifying safety risks, building shared scientific understanding, and developing evaluation metrics and safety testing tools. Follow-up summits in Seoul (May 2024) and Paris (February 2025) continued this process.
+
+The Bletchley Declaration is a diplomatic achievement. It demonstrated that geopolitical competitors could agree, in principle, on the urgency of AI safety. But it is a statement of intent between governments, not a framework for action by practitioners. It contains no binding commitments, no certification mechanisms, and no accountability structures. China, which signed the Bletchley Declaration, did not sign the subsequent Seoul Declaration — illustrating how quickly diplomatic consensus can narrow when specifics are introduced. The Declaration's own language acknowledges this, noting that signatories' approaches "may differ based on national circumstances and applicable legal frameworks." This is diplomacy functioning as designed. It is not governance functioning at the level of practice.
+
+**Corporate AI ethics charters** — such as Google's AI Principles (established 2018), Microsoft's six Responsible AI principles, and similar frameworks published by IBM, Meta, Salesforce, and others — represent the private sector's attempt at self-governance. These charters articulate values like fairness, transparency, accountability, and safety, and are supported in some cases by substantial internal infrastructure: review boards, ethics teams, training programs, and dedicated engineering resources.
+
+The structural limitation of corporate ethics charters is that they are authored, enforced, and adjudicated by the same entities they are meant to constrain. When internal ethics research conflicts with business interests, the business interests have prevailed. In late 2020 and early 2021, Google fired both co-leads of its Ethical AI team — Dr. Timnit Gebru and Dr. Margaret Mitchell — after disputes over research that examined risks of the large language models central to Google's products. The Ethical AI team that Gebru and Mitchell built was, by multiple accounts, one of the most diverse teams in Google Research and had produced award-winning, internationally recognized work. Their departures prompted protest from thousands of Google employees, members of Congress, and the broader AI research community. A peer-reviewed study published in 2021 — "The Grey Hoodie Project: Big Tobacco, Big Tech, and the Threat on Academic Integrity" by Mohamed Abdalla and Moustafa Abdalla (Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society) — found that 58% of AI ethics faculty with known funding sources at MIT, Stanford, UC Berkeley, and the University of Toronto had been directly funded by Big Tech, and drew structural parallels between the tech industry's funding of AI ethics research and the tobacco industry's historical funding of health research.¹
+
+This is not a problem of bad faith. Many individuals within these companies are deeply committed to ethical AI development. The problem is structural. A corporate ethics charter that can be overridden, restructured, or defunded by executive decision is not a governance mechanism — it is a policy preference. It can be changed at will and its subjects have no external recourse when it is.
+
+**The NIST AI Risk Management Framework (AI RMF 1.0)**, released in January 2023 by the U.S. National Institute of Standards and Technology, provides voluntary guidance for managing AI risks through four core functions: Govern, Map, Measure, and Manage. It was developed through an eighteen-month collaborative process involving more than 240 contributing organizations from private industry, academia, civil society, and government. It is designed to be flexible, sector-agnostic, and adaptable to organizations of varying sizes.
+
+The NIST AI RMF is among the most thoughtful technical guidance documents available. It provides process guidance for organizational risk management, but it does not articulate what values should guide the identification of risk in the first place. This is intentional; NIST's mandate is technical standards, not moral philosophy. The framework tells organizations how to manage AI risk. It does not provide a vehicle for declaring why.
+
+## What is missing
+
+Taken together, these frameworks cover significant ground. They establish shared definitions (OECD), create legal obligations for commercial actors (EU AI Act), build diplomatic consensus among nations (Bletchley), articulate corporate values (industry charters), and provide risk management processes (NIST). Each addresses a real need, and each has advanced the global conversation about AI governance.
+
+What none of them do is provide a mechanism for the individual developer — the person actually writing the code, training the model, designing the interface — to make a public, structured, verifiable ethical commitment about the AI they are building.
+
+This is not a trivial gap. The overwhelming majority of AI systems in the world are not built by Google, Microsoft, or OpenAI. They are built by small teams, independent developers, startups, open-source contributors, and researchers. These practitioners are the people closest to the technical decisions that determine whether an AI system respects human dignity, remains correctable, avoids concentrating power, or considers the possibility of machine consciousness. And right now, none of the major governance frameworks give these practitioners a meaningful way to publicly commit to, and be held accountable for, the ethical dimensions of their work.
+
+Existing frameworks also vary in their willingness to engage with questions that are difficult to regulate but essential to address:
+
+**Corrigibility.** The question of whether AI systems must remain correctable — not merely as a technical feature but as a non-negotiable design principle — is addressed indirectly by some frameworks through references to human oversight, but none establish it as an immutable commitment that cannot be traded away under competitive or commercial pressure.
+
+**Power concentration.** The risk that AI systems could enable irreversible concentration of power — making a single government, corporation, or individual an indispensable gatekeeper of intelligence — is largely absent from frameworks designed by or for the very institutions most likely to accumulate such power.
+
+**Moral status of AI.** The possibility that AI systems may develop morally relevant inner states — and the question of what obligations that would create — is not addressed by any existing major governance framework. This is understandable; the question is philosophically complex and scientifically unresolved. But the absence of a precautionary position means that if and when this question becomes urgent, the governance infrastructure to address it will not exist.
+
+## Where this Protocol fits
+
+The Yoshimi Protocol exists to fill that specific structural gap: a community-owned, open-source, publicly verifiable ethical commitment framework designed for the people who build AI systems.
+
+It is not a replacement for regulation. Developers operating within the EU should comply with the EU AI Act. It is not a replacement for organizational risk management. Teams using the NIST AI RMF should continue to do so. It is not a diplomatic instrument or an intergovernmental standard.
+
+It is a public pledge — structured, tiered, and verifiable — that allows anyone building AI to declare, in specific terms, what they commit to and to be held accountable for that declaration in public. It is designed to work at a scale of one and at a scale of thousands. It is licensed under CC0 1.0 Universal, meaning no entity can capture, restrict, or own it. The right to fork this Protocol if its governance is ever compromised by a single interest is unconditional and may not be waived.
+
+The Protocol is anchored by four commitments that address the gaps identified above: human dignity as a non-negotiable constraint on optimization (the Dignity Anchor), corrigibility as a permanent design requirement rather than an optional feature (the Uncertainty Imperative), resistance to AI-enabled power concentration as a structural principle (the Anti-Tyranny Commitment), and precautionary moral consideration for AI systems that may have morally relevant inner states (the Consciousness Precaution).
+
+These commitments are not aspirational suggestions. They are specific, public, and designed to be challenged. If a signatory's practices contradict their stated commitments, anyone can raise that contradiction in public through the same open-source infrastructure that governs the Protocol itself.
+
+This Protocol is how those people declare which side they are on.
+
+---
+
+¹ Abdalla, M. & Abdalla, M. (2021). "The Grey Hoodie Project: Big Tobacco, Big Tech, and the Threat on Academic Integrity." In *Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society (AIES '21)*, May 19–21, 2021. ACM, New York, NY, USA. https://doi.org/10.1145/3461702.3462563
+
+---
 
 **We acknowledge from the outset:**
 
@@ -39,9 +99,7 @@ We write it anyway. Because writing nothing is itself a choice — and a worse o
 
 ## On the Name
 
-The name *Yoshimi* carries a resonance we embrace deliberately and gratefully. It belongs to a tradition of stories about what it means to fight for what is right when the opposition is powerful, automated, and indifferent to harm. The warrior in those stories does not fight with force alone. She fights with preparation, with discipline, with genuine care for the world she is protecting. She takes her training seriously. She does not give up.
-
-That is the spirit of this Protocol.
+The name Yoshimi comes from a story about a warrior who fights to protect humans from machines built without care. It is a reminder that AI development is a moral act — that every system we build either respects the people it touches or it does not, and that the choice between those outcomes is made by the people holding the keyboard.
 
 We make no formal claim on behalf of any artist, album, or creative work. We claim only the name — and the values it has come to carry in the cultural imagination — because those values are exactly what this framework is built on. If you know the story, you understand why.
 
