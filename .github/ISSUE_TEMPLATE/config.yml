@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Website Bug or Suggestion
+    url: https://github.com/yoshimi-protocol/yoshimi-protocol-website/issues/new
+    about: For issues with yoshimiprotocol.org, open an issue in the website repo instead.
+  - name: General Discussion
+    url: https://github.com/yoshimi-protocol/protocol/discussions
+    about: For open-ended questions, ideas, or conversation about the Protocol.

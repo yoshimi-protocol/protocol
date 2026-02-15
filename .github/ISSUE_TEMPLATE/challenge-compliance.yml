@@ -1,0 +1,85 @@
+name: Challenge Compliance
+description: Challenge a signatory's compliance with the Yoshimi Protocol
+title: "Challenge: [Signatory name]"
+labels: ["challenge"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Anyone can challenge a signatory's compliance. Challenges must be specific and evidence-based. Bad-faith challenges are as visible as evasive responses — the system is fair to both sides.
+
+        See [CERTIFICATION_TIERS.md](https://github.com/yoshimi-protocol/protocol/blob/main/CERTIFICATION_TIERS.md) for the full challenge and reversion process.
+
+  - type: input
+    id: signatory
+    attributes:
+      label: Signatory Being Challenged
+      description: The name or project whose compliance you are challenging.
+      placeholder: "e.g., Acme Labs"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Signatory's Current Tier
+      options:
+        - Acknowledged
+        - Compliant
+        - Verified
+    validations:
+      required: true
+
+  - type: dropdown
+    id: commitment
+    attributes:
+      label: Commitment Area
+      description: Which commitment does this challenge relate to?
+      options:
+        - Dignity Anchor
+        - Uncertainty Imperative
+        - Anti-Tyranny Commitment
+        - Consciousness Precaution
+        - Training Data Disclosure
+        - Annual Accountability Update
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific-claim
+    attributes:
+      label: Specific Claim Being Challenged
+      description: What specific claim in the signatory's public artifacts (Self-Assessment, Compliance Document, etc.) do you believe is inaccurate or incomplete?
+      placeholder: "Their Compliance Document states X, but..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide links, documentation, or specific observations that support your challenge. Be as concrete as possible.
+      placeholder: |
+        - Link to the claim: https://...
+        - Contradicting evidence: https://...
+        - Description of the discrepancy: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: requested-action
+    attributes:
+      label: Requested Action
+      description: What would resolve this challenge? An update to the signatory's artifacts, a correction, a tier reversion?
+      placeholder: "The signatory should update their Compliance Document to address..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: good-faith
+    attributes:
+      label: Good Faith Declaration
+      options:
+        - label: I am raising this challenge in good faith based on specific, verifiable concerns.
+          required: true

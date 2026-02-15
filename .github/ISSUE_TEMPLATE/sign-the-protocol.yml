@@ -1,0 +1,68 @@
+name: Sign the Protocol
+description: Declare your intent to adopt the Yoshimi Protocol
+title: "Sign: [Your name or project]"
+labels: ["signatory"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for signing the Yoshimi Protocol. This Issue declares your intent. To complete the process, you will also need to submit a pull request to the website repo adding your entry to `signatories.json`.
+
+        Full instructions: [CONTRIBUTING.md](https://github.com/yoshimi-protocol/protocol/blob/main/CONTRIBUTING.md)
+
+  - type: input
+    id: name
+    attributes:
+      label: Name or Project
+      description: The name you want displayed on the signatory list.
+      placeholder: "e.g., Jane Smith or Project Aurora"
+    validations:
+      required: true
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub Handle
+      placeholder: "e.g., @janesmith"
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      description: Your organization, or "Independent" if signing as an individual.
+      placeholder: "e.g., Acme Labs or Independent"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Certification Tier
+      description: Which tier are you signing at? See [CERTIFICATION_TIERS.md](https://github.com/yoshimi-protocol/protocol/blob/main/CERTIFICATION_TIERS.md) for details.
+      options:
+        - Acknowledged
+        - Compliant
+    validations:
+      required: true
+
+  - type: textarea
+    id: statement
+    attributes:
+      label: Brief Statement
+      description: A few sentences on why you're signing and what this commitment means for your work.
+      placeholder: "We believe AI development requires public accountability..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Public Artifacts
+      description: Links to your completed Self-Assessment, ethics statement, or Compliance Document (as applicable for your tier).
+      placeholder: |
+        - Self-Assessment: https://...
+        - Ethics Statement: https://...
+    validations:
+      required: true
