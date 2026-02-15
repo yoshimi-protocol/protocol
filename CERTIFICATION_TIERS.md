@@ -1,7 +1,5 @@
 # Certification Tiers
 
-**Version 0.2 — Proposed Revision**
-
 The Yoshimi Protocol uses three certification tiers. Each tier produces a public artifact that anyone can inspect. Transparency is the enforcement mechanism: every claim is documented, every document is public, and every review is on the record.
 
 Tiers are cumulative. Each includes the requirements of the tier below it.
